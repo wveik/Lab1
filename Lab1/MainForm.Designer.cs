@@ -28,6 +28,7 @@
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chartMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -46,11 +47,11 @@
             this.txtNumber = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBoxFiltered = new System.Windows.Forms.GroupBox();
+            this.checkDate = new System.Windows.Forms.CheckBox();
             this.dateTimeCreate = new System.Windows.Forms.DateTimePicker();
             this.comboBoxOwners = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.checkDate = new System.Windows.Forms.CheckBox();
             this.mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             this.groupBoxFiltered.SuspendLayout();
@@ -72,6 +73,7 @@
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openMenuItem,
             this.saveMenuItem,
+            this.chartMenuItem,
             this.closeMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
@@ -80,16 +82,23 @@
             // openMenuItem
             // 
             this.openMenuItem.Name = "openMenuItem";
-            this.openMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openMenuItem.Size = new System.Drawing.Size(132, 22);
             this.openMenuItem.Text = "Открыть";
             this.openMenuItem.Click += new System.EventHandler(this.openMenuItem_Click);
             // 
             // saveMenuItem
             // 
             this.saveMenuItem.Name = "saveMenuItem";
-            this.saveMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveMenuItem.Size = new System.Drawing.Size(132, 22);
             this.saveMenuItem.Text = "Сохранить";
             this.saveMenuItem.Click += new System.EventHandler(this.saveMenuItem_Click);
+            // 
+            // chartMenuItem
+            // 
+            this.chartMenuItem.Name = "chartMenuItem";
+            this.chartMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.chartMenuItem.Text = "Отчет";
+            this.chartMenuItem.Click += new System.EventHandler(this.chartMenuItem_Click);
             // 
             // closeMenuItem
             // 
@@ -259,6 +268,16 @@
             this.groupBoxFiltered.TabStop = false;
             this.groupBoxFiltered.Text = "Фильтры";
             // 
+            // checkDate
+            // 
+            this.checkDate.AutoSize = true;
+            this.checkDate.Location = new System.Drawing.Point(459, 29);
+            this.checkDate.Name = "checkDate";
+            this.checkDate.Size = new System.Drawing.Size(137, 17);
+            this.checkDate.TabIndex = 16;
+            this.checkDate.Text = "Фильровать по дате?";
+            this.checkDate.UseVisualStyleBackColor = true;
+            // 
             // dateTimeCreate
             // 
             this.dateTimeCreate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -269,6 +288,7 @@
             // 
             // comboBoxOwners
             // 
+            this.comboBoxOwners.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOwners.FormattingEnabled = true;
             this.comboBoxOwners.Location = new System.Drawing.Point(262, 53);
             this.comboBoxOwners.Name = "comboBoxOwners";
@@ -295,16 +315,6 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // checkDate
-            // 
-            this.checkDate.AutoSize = true;
-            this.checkDate.Location = new System.Drawing.Point(459, 29);
-            this.checkDate.Name = "checkDate";
-            this.checkDate.Size = new System.Drawing.Size(137, 17);
-            this.checkDate.TabIndex = 16;
-            this.checkDate.Text = "Фильровать по дате?";
-            this.checkDate.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,6 +330,7 @@
             this.Controls.Add(this.mainMenuStrip);
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавить";
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
@@ -360,6 +371,7 @@
         private System.Windows.Forms.DateTimePicker dateTimeCreate;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.CheckBox checkDate;
+        private System.Windows.Forms.ToolStripMenuItem chartMenuItem;
     }
 }
 

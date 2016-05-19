@@ -81,6 +81,7 @@
             // 
             // comboBoxOwners
             // 
+            this.comboBoxOwners.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOwners.FormattingEnabled = true;
             this.comboBoxOwners.Location = new System.Drawing.Point(28, 102);
             this.comboBoxOwners.Name = "comboBoxOwners";

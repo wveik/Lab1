@@ -181,6 +181,11 @@ namespace Lab1 {
         }
 
         private void openMenuItem_Click(object sender, EventArgs e) {
+
+            this.listDescription = new List<AutoDescription>();
+
+            ShowListDescription(listDescription);
+
             string path = string.Empty;
             string arrayData = string.Empty;
 
@@ -200,7 +205,13 @@ namespace Lab1 {
             foreach (var row in rows) {
                 listDescription.Add(new AutoDescription(row));
             }
+
             ShowListDescription(listDescription);
+        }
+
+        private void chartMenuItem_Click(object sender, EventArgs e) {
+            Lab1.ServiceWindows.Chart window = new Lab1.ServiceWindows.Chart(listDescription);
+            window.ShowDialog();
         }
     }
 }
