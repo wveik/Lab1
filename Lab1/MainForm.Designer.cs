@@ -52,6 +52,7 @@
             this.comboBoxOwners = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.saveToExcelMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
             this.groupBoxFiltered.SuspendLayout();
@@ -74,6 +75,7 @@
             this.openMenuItem,
             this.saveMenuItem,
             this.chartMenuItem,
+            this.saveToExcelMenuItem,
             this.closeMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
@@ -82,28 +84,28 @@
             // openMenuItem
             // 
             this.openMenuItem.Name = "openMenuItem";
-            this.openMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.openMenuItem.Size = new System.Drawing.Size(170, 22);
             this.openMenuItem.Text = "Открыть";
             this.openMenuItem.Click += new System.EventHandler(this.openMenuItem_Click);
             // 
             // saveMenuItem
             // 
             this.saveMenuItem.Name = "saveMenuItem";
-            this.saveMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.saveMenuItem.Size = new System.Drawing.Size(170, 22);
             this.saveMenuItem.Text = "Сохранить";
             this.saveMenuItem.Click += new System.EventHandler(this.saveMenuItem_Click);
             // 
             // chartMenuItem
             // 
             this.chartMenuItem.Name = "chartMenuItem";
-            this.chartMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.chartMenuItem.Size = new System.Drawing.Size(170, 22);
             this.chartMenuItem.Text = "Отчет";
             this.chartMenuItem.Click += new System.EventHandler(this.chartMenuItem_Click);
             // 
             // closeMenuItem
             // 
             this.closeMenuItem.Name = "closeMenuItem";
-            this.closeMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.closeMenuItem.Size = new System.Drawing.Size(170, 22);
             this.closeMenuItem.Text = "Выход";
             // 
             // оПрограммеToolStripMenuItem
@@ -315,6 +317,13 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // saveToExcelMenuItem
+            // 
+            this.saveToExcelMenuItem.Name = "saveToExcelMenuItem";
+            this.saveToExcelMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.saveToExcelMenuItem.Text = "Сохранить в Excel";
+            this.saveToExcelMenuItem.Click += new System.EventHandler(this.saveToExcelMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,6 +381,7 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.CheckBox checkDate;
         private System.Windows.Forms.ToolStripMenuItem chartMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToExcelMenuItem;
     }
 }
 

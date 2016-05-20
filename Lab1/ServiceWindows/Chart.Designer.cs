@@ -23,9 +23,9 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.comboBoxTypeCharts = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -34,16 +34,16 @@
             // 
             // chartMain
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartMain.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartMain.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.chartMain.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartMain.Legends.Add(legend3);
             this.chartMain.Location = new System.Drawing.Point(12, 12);
             this.chartMain.Name = "chartMain";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartMain.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartMain.Series.Add(series3);
             this.chartMain.Size = new System.Drawing.Size(386, 300);
             this.chartMain.TabIndex = 0;
             this.chartMain.Text = "chart1";
@@ -54,6 +54,8 @@
             this.comboBoxTypeCharts.DropDownWidth = 300;
             this.comboBoxTypeCharts.FormattingEnabled = true;
             this.comboBoxTypeCharts.Location = new System.Drawing.Point(416, 42);
+            this.comboBoxTypeCharts.MaximumSize = new System.Drawing.Size(121, 0);
+            this.comboBoxTypeCharts.MinimumSize = new System.Drawing.Size(121, 0);
             this.comboBoxTypeCharts.Name = "comboBoxTypeCharts";
             this.comboBoxTypeCharts.Size = new System.Drawing.Size(121, 21);
             this.comboBoxTypeCharts.TabIndex = 1;

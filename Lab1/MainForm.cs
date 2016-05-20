@@ -53,9 +53,11 @@ namespace Lab1 {
         }
 
         private void ShowListDescription(List<AutoDescription> listDescription) {
-            dataGridViewMain.DataSource = null;
+            //dataGridViewMain.DataSource = null;
+            var source = new BindingSource();
             var orderedList = listDescription.OrderBy(x => x, new MyCompareDescription()).ToList();
-            dataGridViewMain.DataSource = orderedList;
+            source.DataSource = orderedList;
+            dataGridViewMain.DataSource = source;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e) {
@@ -98,7 +100,7 @@ namespace Lab1 {
             } catch {
                 index = 0;
             }
-            int id = int.Parse(dataGridViewMain.Rows[index].Cells["ID_DESCRIPTION"].Value.ToString());
+            int id = int.Parse(dataGridViewMain.Rows[index].Cells["idCol"].Value.ToString());
 
             List<AutoDescription> result = new List<AutoDescription>();
 
@@ -164,19 +166,6 @@ namespace Lab1 {
                 }
             }
 
-            StringBuilder builder = new StringBuilder();
-
-            foreach (var item in listDescription) {
-                builder.Append(
-                    item.ID_DESCRIPTION.ToString() + "\t"
-                    + item.MARK + "\t"
-                    + item.NUMBER + "\t"
-                    + item.LAST_NAME + "\t"
-                    + item.CREATE_DATE
-                    );
-                builder.Append(Environment.NewLine);
-            }
-
             MessageBox.Show("Сохранено Успешно!");
         }
 
@@ -212,6 +201,30 @@ namespace Lab1 {
         private void chartMenuItem_Click(object sender, EventArgs e) {
             Lab1.ServiceWindows.Chart window = new Lab1.ServiceWindows.Chart(listDescription);
             window.ShowDialog();
+        }
+
+        private void saveToExcelMenuItem_Click(object sender, EventArgs e) {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.Filter = "Excel files (*.csv)|";
+            saveFileDialog1.RestoreDirectory = true;
+            saveFileDialog1.Title = "Сохраняем для Истории";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "") {
+                StringBuilder sb = new StringBuilder();
+                foreach (DataGridViewRow row in this.dataGridViewMain.Rows) {
+                    foreach (DataGridViewCell cell in row.Cells) {
+                        sb.Append(cell.Value.ToString() + ";");
+                    }
+                    sb.Append(Environment.NewLine);
+                }
+                string path = saveFileDialog1.FileName;
+                path += saveFileDialog1.FileName.EndsWith(".csv") ? "" : ".csv";
+                using (StreamWriter sw = File.CreateText(path)) {
+                    sw.Write(sb.ToString());
+                }
+            }
         }
     }
 }
